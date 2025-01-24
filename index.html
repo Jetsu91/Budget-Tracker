@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Budget Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="tracker.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.bundle.js"></script>
+        <style>
+            /* General table styling */
+            #expenseTable {
+                width: 100%;
+                border-collapse: collapse;
+                table-layout: fixed; /* Ensures proper alignment of columns */
+            }
+
+            #expenseTable thead {
+                position: sticky;
+                top: 0;
+                background-color: #f9f9f9;
+                z-index: 1; /* Ensures header stays above table body */
+            }
+
+            #expenseTable th, #expenseTable td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+                word-wrap: break-word; /* Prevents overflow of long text */
+            }
+
+            /* Scroll container for the table */
+            #expenseTableContainer {
+                max-height: 300px; /* Set max height for scrollable area */
+                overflow-y: auto; /* Enable vertical scrolling */
+                overflow-x: hidden; /* Prevent horizontal scrolling */
+            }
+
+            /* Responsive adjustments for smaller screens */
+            @media (max-width: 600px) {
+                #expenseTable th, #expenseTable td {
+                    font-size: 14px;
+                    padding: 8px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="body-logo">
+            <img src="money.jpeg" alt="Background Logo">
+        </div>
+        <header class="header-wrap">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.svg" alt="Company Logo">
+                </a>
+            </div>
+            <h1 class="header-title">
+                <span class="star">STAR</span><span class="riders">Riders</span>
+            </h1>
+            <p class="header-subtitle">Saving Money is Fortune</p>
+            <nav class="main-navigation" aria-label="Main Navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item"><a href="#">Home</a></li>
+                    <li class="navigation-item"><a href="#">About</a></li>
+                    <li class="navigation-item"><a href="#">Services</a></li>
+                    <li class="navigation-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="action-button">Learn More</a>
+        </header>
+
+        <p id="tegst"><i>Want to save for rainy days? Set a savings goal now!</i></p>
+
+        <div class="intro">
+            <h2><strong>Spending<br>Limit</strong>
+            <br><input type="number" id="goalAmount" placeholder="Enter your income"></h2>
+            <div class="circular-progress">
+                <div class="circle">
+                    <span id="progressText">0%</span>
+                </div>
+            </div>
+        </div>
+        <div id="progressDisplay"></div>
+
+        <main>
+            <h1>Track your budget with our <span>STAR TRACKER</span></h1>
+            
+            <div class="dropdown">
+                <button class="dropdownBtn">Select Here</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setCategory('Food')">Food</a>
+                    <a href="#" onclick="setCategory('Utilities')">Utilities</a>
+                    <a href="#" onclick="setCategory('Entertainment')">Entertainment</a>
+                    <a href="#" onclick="setCategory('Transport')">Transport</a>
+                </div>
+            </div>
+        
+            <input type="text" id="categoryInput" placeholder="Selected Category" readonly>
+            <input type="number" id="amountInput" placeholder="Amount">
+
+            <button onclick="addExpenseRow()">Add</button>
+        
+            <div id="expenseTableContainer">
+                <table id="expenseTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">No data yet</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td id="totalAmount">0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </main>
+    </body>
+
+    <footer class="footer bg-dark text-light py-2 mt-5">
+        <div class="container text-center">
+            <div class="footer-logo mb-2">
+                <img src="logo.svg" alt="Company Logo" style="max-height: 200px;">
+            </div>
+            <ul class="footer-links list-inline">
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+                <li class="list-inline-item"><a href="#">Contact Us</a></li>
+            </ul>
+            <p class="footer-text mb-0">&copy; 2025 STAR Riders. All rights reserved.</p>
+        </div>
+    </footer>  
+</html>
