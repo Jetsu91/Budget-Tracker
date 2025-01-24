@@ -1,0 +1,465 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,rgb(0, 0, 57), #000000);
+    font-family: Arial, sans-serif;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(to right, black,rgb(0, 0, 57), rgb(0, 0, 0));
+}
+
+.logo img{
+    display: flex;
+    align-items: center;
+    color: fill red;
+}
+
+.logo img {
+    max-height: 100px;
+    width: auto;
+    height: 50px;
+}
+
+.up {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.up ul {
+    display: flex;
+    gap: 50px; /* Space between each list item */
+    margin: 0 30px;
+}
+
+.up li {
+    list-style: none;
+}
+
+.up a {
+    text-decoration: none;
+    color: #ffffff; /* Text color */
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: background-color 0.3s;
+}
+
+.up a:hover {
+    background-color: rgb(171, 96, 42);
+    border-radius: 5px;
+}
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: grey;}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#expenseTable
+{
+    overflow-x: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #ddd;
+}
+
+th, td {
+    border: 5px solid #3e0177;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#inputRow {
+    margin: 20px auto;
+    width: 80%;
+}
+
+#inputRow input {
+    margin: 5px;
+}
+
+.header-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px; /* Increase padding */
+    background: rgba(25, 4, 128, 0.667);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+    overflow: hidden; /* Ensure the logo does not overflow */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.header-title {
+    font-size: 5em;
+    font-family: 'Arial Black', sans-serif;
+    margin: 30px 0;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 3D effect text shadow */
+    z-index: 2; /* Ensure the title is above the logo */
+    margin: 30px 0;
+}
+
+.header-subtitle {
+    font-size: 2.5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 15px 0;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 3D effect text shadow */
+    z-index: 2; /* Ensure the subtitle is above the logo */
+}
+
+.header-title .star {
+    color: darkblue;
+}
+
+.header-title .riders {
+    color: #ffcc00; /* Set color for Riders */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+input#goalAmount{
+    position: relative;
+    height: 80px;
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+    font-size: 1vw;
+    right: 23%;
+}
+.logo {
+    position: absolute;
+    top: 50%; /* Move the logo down */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(5.5); /* Increase the scale to make the logo larger */
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Ensure the logo is behind the text */
+}
+
+main {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    margin-top: 20px; /* Adjust as needed */
+    background-color: linear-gradient(to bottom, black, white);
+}
+
+main h1{
+    color: white;
+    margin-top: 200px;
+}
+main > *:not(table), *h1 { /* Select all direct children of main except the table */
+    margin-right: 20px; /* Optional: Space between non-table items */
+}
+
+main > table, h1 {
+    text-align: center;
+    width: 100%; /* Ensure the table takes the full width */
+    margin-top: 20px; /* Space between the table and other items */
+}
+
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the logo is fully visible */
+    opacity: 0.3; /* Make the logo slightly transparent */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.logo img:hover {
+    opacity: 0.5; /* Increase opacity on hover */
+    transform: scale(1.6); /* Slightly increase the size on hover */
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    z-index: 2; /* Ensure the navigation is above the logo */
+}
+
+.navigation-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-item {
+    margin: 0 20px;
+}
+
+.navigation-item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 3D effect text shadow */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation-item a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.circular-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 700px;
+    height: 700px;
+    margin-top: auto;
+    border-radius: 50%;
+    background: conic-gradient(#984caf 0% 0%, #e0e0e0 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#progressText {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 2;
+}
+.action-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 3D effect shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Ensure the button is above the logo */
+}
+
+.action-button:hover {
+    background-color: #ffaa00;
+    transform: scale(1.1);
+}
+
+.modal-content button{
+    width: 28%;
+    font-size: 80px;
+}
+
+.body-logo {
+    position: fixed; /* Make the logo cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Ensure the logo is behind all other elements */
+    opacity: 0.3; /* Make the logo slightly transparent */
+    pointer-events: none; /* Ensure the logo does not interfere with other elements */
+}
+
+.body-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the logo covers the entire viewport */
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the arrow controls in input type number for Firefox */
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+tfoot td {
+    background-color: white; /* Set the background color to white */
+    color: black; /* Optional: Change the text color for better contrast */
+}
+
+.intro{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 100px;
+}
+
+body .intro h2{
+    font-size: 10em;
+    color: #ffffff;
+    text-align: left;
+}
+
+#tegst{
+    margin: 70px auto 50px;
+    font-size: 5em;
+    color:#eaeaea;
+    text-align: center;
+}
+
+main h1{
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+main h1 span{
+    color:yellow;
+    font-weight: 800;
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+input#modalGoalAmount{
+    width: 40%;
+    margin: 10px auto;
+    font-size: 100px;
+    border-radius: 5%;
+}
+
+.stuff{
+    width: 60%;
+    height: auto;
+}
+.modal-content {
+    background-color: #fbfafa;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    font-size: 10em;
+    display: flex;        /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;   /* Center the items horizontally */
+}
+
+.close {
+    display: flex;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#progressDisplay {
+    font-size: 10em;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 0.5em;
+
+    body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #4b0082, #1c1c1c);
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.1);
+    color: #dda0dd; /* Light purple */
+}
